@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_card"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Смена пароля"
+            style="@style/subheader_2"
+            android:layout_marginBottom="16dp"
+            />
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_field"
+            android:hint="Введите новый пароль..."
+            style="@style/plain_text"
+            android:height="48dp"
+            android:padding="8dp"/>
+    </LinearLayout>

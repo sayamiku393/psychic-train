@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"><!-- потому что мне надо видеть, как он выглядит, а создание его в комплекте этого не позволяет-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgr_grey">
+        <!-- Хэдер -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp">
+
+            <ImageButton
+                android:id="@+id/abort_cross"
+                style="@style/back_button"
+                android:src="@drawable/criss_cross"
+                android:onClick="abort_func" />
+
+            <TextView
+                android:id="@+id/dot_title"
+                style="@style/subheader_1"
+                android:text="Название точки" />
+        </LinearLayout>
+        <!-- пикча -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/no_photo"
+            android:layout_margin="10dp"/>
+        <!-- книжки -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- книжка 1 -->
+            <LinearLayout
+                android:id="@+id/book_card_id"
+                style="@style/book_card_back">
+
+                <ListView
+
+                    style="@style/plain_text"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

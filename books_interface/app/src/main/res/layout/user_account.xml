@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAcc"
+    android:background="@color/backgr_grey">
+
+<LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Профиль"
+            android:src="@drawable/profile_pic" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/subheader_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имя Пользователя" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/history"
+        style="@style/subheader_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Читаю сейчас"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <ListView
+        android:id="@+id/history_list"
+        android:layout_width="433dp"
+        android:layout_height="396dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <TextView
+        android:id="@+id/no_books"
+        style="@style/plain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вы пока не брали книг."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history"
+        android:layout_margin="16dp"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

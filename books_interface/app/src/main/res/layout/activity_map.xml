@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:panelHeight="68dp"
+    sothree:shadowHeight="0dp"
+    sothree:overlay="true"
+    sothree:fadeColor="@color/grey"
+    tools:context=".Map">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+            android:background="@drawable/img"
+            android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/profile"
+            style="@style/back_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="go_to_profile_func"
+            android:src="@drawable/profile_pic"/>
+
+            <ImageButton
+                android:id="@+id/dot1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="38dp"
+                android:src="@drawable/dot"
+                android:contentDescription="dot"
+                android:onClick="display_dot"/>
+
+
+            <ImageButton
+                android:id="@+id/dot2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="265dp"
+                android:src="@drawable/dot"
+                android:contentDescription="dot"
+                android:onClick="display_dot"/>
+
+
+            <ImageButton
+                android:id="@+id/dot3"
+                android:layout_margin="105dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/dot"
+                android:contentDescription="dot"
+                android:onClick="display_dot"/>
+
+            <ImageButton
+                android:id="@+id/dot4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/dot"
+                android:contentDescription="dot"
+                android:onClick="display_dot"/>
+
+
+            <ImageButton
+                android:id="@+id/dot5"
+                android:layout_marginStart="280dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/dot"
+                android:contentDescription="dot"
+                android:onClick="display_dot"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--выдвижная панелька-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgr_grey">
+        <!-- Хэдер -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp">
+
+            <ImageButton
+                android:id="@+id/abort_cross"
+                style="@style/back_button"
+                android:src="@drawable/criss_cross"
+                android:onClick="abort_func" />
+
+            <TextView
+                android:id="@+id/book_title"
+                style="@style/subheader_1"
+                android:text="Название точки" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

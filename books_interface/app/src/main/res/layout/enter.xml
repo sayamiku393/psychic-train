@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgr_grey">
+
+    <ImageView
+        android:id="@+id/bookImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/authorisation"
+        style="@style/header"
+        android:text="Авторизация"
+        app:layout_constraintTop_toBottomOf="@id/bookImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+    <EditText
+        android:id="@+id/login_EditText"
+        style="@style/input_field"
+        android:hint="Логин"
+        app:layout_constraintTop_toBottomOf="@id/authorisation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/password_EditText"
+        android:hint="Пароль"
+        style="@style/input_field"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/login_EditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="forgot_password_func"
+        android:text="Забыли пароль?"
+        android:textColor="@color/book_lavender"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_EditText" />
+
+    <TextView
+        android:id="@+id/incorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        style="@style/plain_text"
+        android:text="Неверный логин или пароль"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/repeating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        style="@style/plain_text"
+        android:text="Такой логин уже существует"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/registerButton"
+        style="@style/big_button"
+        android:onClick="register_func"
+        android:text="Зарегистрироваться"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/big_button"
+        android:text="Войти"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="login_func"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

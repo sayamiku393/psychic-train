@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/book_card"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="16dp">
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subheader_2"
+        android:text="Book"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/plain_text"
+        android:text="Author"/>
+
+</LinearLayout>
